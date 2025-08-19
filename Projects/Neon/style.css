@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+.nav-bar{
+    height: 60px;
+    width: 100%;
+    background-color: #0f1111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    background-image: url("images/moon-lg.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+}
+.border{
+    border: 2px solid transparent;
+    padding: 3px 4px;
+}
+.border:hover{
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+.add1{
+    color: #cccccc;
+    font-size: 0.8rem;
+    margin-left: 15px;
+}
+.add2{
+    font-size: 1.2rem;
+    margin-left: -2px;
+    font-weight: 500;
+}
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1000px;
+    height: 40px;
+    background-color: rgb(255, 195, 105);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+.search-select{
+    background-color: rgb(189, 189, 189);
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+}
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding-left: 10px;
+}
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+}
+.nav-search:hover{
+    border: 2px solid orange;
+}
+.flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.flag p{
+    font-size: 0.7rem;
+    padding: 5px;
+}
+.flg-o{
+    background-color: #0f1111;
+    color: #fff;
+    border: none;
+}
+.sign-o{
+    background-color: #0f1111;
+    color: #fff;
+    border: none;
+    font-size: 0.9rem; 
+    vertical-align: middle; 
+}
+span{
+    font-size: 0.75rem;
+}
+
+.nav2{
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center; 
+}
+.nav-cart i{
+    font-size: 30px;
+}
+.nav-cart{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/*-----------------Panel Bar-----------------*/
+
+.panel{
+    height: 50px;
+    width: 100%;
+    background-color: #253547;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.panel-ops{
+    width: 70%;
+    font-size: 1rem;
+}
+.panel-ops p{
+    display: inline;
+    margin-left: 10px;
+}
+.panel-deals{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.panel2{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(218, 217, 217);
+    display: flex;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: start;
+}
+.panel2-ops{
+    width: 70%;
+    font-size: 0.8rem;
+    margin-left: 12px;
+}
+.panel2-ops p{
+    display: inline;
+    margin-left: 15px;
+}
+.udline{
+    margin-left: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.udline::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    height: 2px;
+    width: 0%;
+    background: rgb(0, 0, 0);
+    transition: width 0.02s ease; 
+    background-color : 0.02s ease;
+}
+.udline:hover{
+    color: rgb(0, 74, 144); 
+}
+.udline:hover::after{
+    width: 100%;
+    background-color: rgb(0, 74, 144);
+}
+
+/*---------------Hero Section--------------*/
+
+.swiper{
+    position: relative;
+    width: 70%;
+    height: fit-content;
+}
+.swiper-slide img{
+    width: 100%;
+    display: block;
+}
+.hero-msg{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    width: 80%;
+    z-index: 10;
+    font-weight: 400;
+}
+.hero-msg a{
+    color: rgb(255, 58, 58);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #fff;
+}
+.swiper .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+/*--------------------------Shop Section------------------------*/
+
+.shop-sec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #cccccc;
+}
+.box{
+    border: none;
+    height: 350px;
+    width: 21%;
+    background-color: #fff;
+    padding: 20px 0 15px;
+    margin-top: 20px;
+}
+.box-img{
+    height: 275px;
+    width: 100%;
+    background-image: contain;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-content{
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+.box-content p{
+    color: rgb(255, 58, 58);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/*----------------------Footer----------------------*/
+.footer{
+    margin-top: 15px;
+}
+.footer-panel1{
+    background-color: #41566b;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.footer-panel2{
+    background-color: #1b293e;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul{
+    margin: 60px;
+}
+ul p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+ul a{
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #dddddd;
+    cursor: pointer;
+}
+ul a:hover{
+    text-decoration: underline;
+}
+.footer-panel3{
+    height: 70px;
+    background-color: #1b293e;
+    color: white;
+    border-top: 0.5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel3-components{
+    margin-left: 60px;
+    border: 0.5px solid whitesmoke;
+    padding: 9px 10px;
+    cursor: pointer;
+}
+.ftr{
+    margin-left: 40px;
+    border: 0.1px solid whitesmoke;
+    padding: 5px 7px;
+}
+.ftr p{
+    font-size: 0.8rem;
+}

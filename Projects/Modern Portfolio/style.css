@@ -1,0 +1,163 @@
+/*------------Header-----------*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #b5e7a0;
+    color: #000000;
+    font-family: "poppins", monospace;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    background-color: #86af49;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+nav ul li a:hover{
+    position: relative;
+    color: #23231d;
+    font-size: 1.01rem;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #23231d;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+.left{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+.left:hover{
+    color: #23231d;
+}
+
+/*---------------Mian---------------*/
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;   
+}
+.firstSection > div{
+    width: 30%;   
+}
+.leftSection{
+    font-size: 2.4rem;
+}
+.leftSection .name{
+    color: #c83349;
+    font-weight: 400;
+}
+.rightSection{
+    background-color: none;
+}
+.rightSection img{
+    width: 70%;
+    margin: 50px 0;
+}
+#element{
+    color:  #c83349;
+}
+main hr{
+    border: 0;
+    background: #c83349;
+    height: 1.5px;
+    margin: 40px 120px;
+}
+
+.secondSection{
+    max-width: 80vw;
+    height: 80vh;
+    margin: auto;
+    padding-top: 20px;
+}
+.secondSection h1{
+    font-size: 1.8rem;
+}
+.secondSection line{
+    color: #23231d;
+}
+.secondSection .box{
+    background: white;
+    height: 2px;
+    width: 155vh;
+    margin: 70px 10px;
+    display: flex;
+}
+.secondSection .vertical{
+    height: 55px;
+    width: 2px;
+    background-color: #ffffff;
+    margin: 0 120px;
+}
+.image-top{
+    width: 50px;
+    position: relative;
+    top: -50px;
+    left: -20px;
+}
+.vertical-title{
+    position: relative;
+    top: 5px;
+    width: 150px;
+}
+.vertical-desc{
+    position: relative;
+    top: 20px;
+    width: 200px;
+    font-size: small;
+}
+
+/*---------------------Footer---------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #d8d8d8a2;
+}
+
+.footer h4{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.icons .fa-brands{
+    color: #452c2c;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 25px 0;
+    font-size: 19px;
+}
+
+.fa-duotone{
+    color: #452c2c;
+}

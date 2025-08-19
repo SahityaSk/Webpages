@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-addres border">
+                <p class="add1">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add2">India</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option value="">All</option>
+                </select>
+                <input type="text" placeholder="Search Products" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="flag border">
+                <img src="https://flagcdn.com/40x30/in.png" srcset="https://flagcdn.com/80x60/in.png 2x, https://flagcdn.com/120x90/in.png 3x" width="22" height="14">
+                <p>IND</p>
+                <select class="flg-o">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="sign-in border">
+                <p><span>Hello, Sign in</span></p>
+                <p class="nav2">Account lists</p>
+                <select class="sign-o">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="nav-returns border">
+                <p><span>Returns</span></p>
+                <p class="nav2">& Orders</p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+  <!-----------------------Panels------------------------>      
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p class="border">Today's Deals</p>
+                <p class="border">Browsing History</p>
+                <p class="border">Neon Player</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+                <p class="border">Pay Balanace</p>
+                <p class="border">Neon Basics</p>
+                <p class="border">Customer Service</p>
+            </div>
+            <div class="panel-deals border">
+                <p>Shop Deals in Electronics
+                    <i class="fa-solid fa-mobile-button"></i> 
+                </p>
+            </div>
+        </div>
+        <div class="panel2">
+            <div class="panel2-ops">
+                <p class="udline">Your Neon.in</p>
+                <p class="udline">Your Profile</p>
+                <p class="udline">Your Browsing History</p>
+                <p class="udline">Recommended For You</p>
+                <p class="udline">Improve Your Recommendation</p>
+                <p class="udline">Learn More</p>
+            </div>
+        </div>
+    </header>
+<!--------------------Hero Section--------------------->
+    <div class="hero-sec">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/galaxy.jpg"></div>
+                <div class="swiper-slide"><img src="images/batman.jpg"></div>
+                <div class="swiper-slide"><img src="images/laptop.jpg"></div>
+                <div class="swiper-slide"><img src="images/keanu-reeves.jpg"></div>
+                <div class="swiper-slide"><img src="images/luffy.jpg"></div>
+            </div>
+            <div class="hero-msg">
+                <p>You are on neon.com. You can shop million of products on neon.com with fast local delivery. 
+                <a href="#">Click here to go to Neon.in</a>
+                </p>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+<!----------------------Shop Sec------------------------>
+    <div class="shop-sec">
+        <div class="box">
+            <div class="box-content">
+                <h2>Electronics</h2>
+                <div class="box-img" style="background-image: url('images/luffy.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Beauty Picks</h2>
+                <div class="box-img" style="background-image: url('images/galaxy.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Health & Personal Care</h2>
+                <div class="box-img" style="background-image: url('images/keanu-reeves.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Fashion Items</h2>
+                <div class="box-img" style="background-image: url('images/batman.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Make Up Kits</h2>
+                <div class="box-img" style="background-image: url('images/luffy.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Laptops & Mobiles</h2>
+                <div class="box-img" style="background-image: url('images/galaxy.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Pet Care</h2>
+                <div class="box-img" style="background-image: url('images/keanu-reeves.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>New Arrivals</h2>
+                <div class="box-img" style="background-image: url('images/batman.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+    </div>
+  <!--------------------------Footer---------------------------->  
+    <footer>
+        <div class="footer-panel1">
+            <p class="border">Back to Top</p>
+        </div>
+        <div class="footer-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>About Neon</a>
+                <a>Careers</a>
+                <a>Press Releases</a>
+                <a>Neon Science</a>
+                <a>Neon Services</a>
+            </ul>
+            <ul>
+                <p>Connect With Us</p>
+                <a>Facebook</a>
+                <a>Twitter</a>
+                <a>Instagram</a>
+                <a>Youtube</a>
+                <a>Discord</a>
+            </ul>
+            <ul>
+                <p>Make Money With Us</p>
+                <a>Sell on Neon</a>
+                <a>Supply to Neon</a>
+                <a>Become an Affiliate</a>
+                <a>Fulfilment by Neon</a>
+                <a>Advertise Your Products</a>
+                <a>Neon Pay on Merchants</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Your Account</a>
+                <a>Returns Centre</a>
+                <a>100% Purchase Protection</a>
+                <a>Neon App Download</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="footer-panel3">
+            <div class="logo">
+            </div>
+            <div class="panel3-components">
+                <p>
+                <i class="fa-solid fa-globe"></i>
+                English
+                <i class="fa-solid fa-up-down"></i>
+                </p>
+            </div>
+            <div class="panel3-components">
+                <p>
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                INR- Indian Rupees
+                </p>
+            </div>
+            <div class="flag ftr">
+                <img src="https://flagcdn.com/40x30/in.png" srcset="https://flagcdn.com/80x60/in.png 2x, https://flagcdn.com/120x90/in.png 3x" width="22" height="14">
+                <p> INDIA </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
