@@ -1,0 +1,6 @@
+    <ul>
+        <li onClick={() => checkAns(1)} className={ selected ? question.ans === 1 ? "correct" : selected === 1 ? "wrong" : "" : "" }>{question.option1}</li>
+        <li onClick={() => checkAns(2)} className={ selected ? question.ans === 2 ? "correct" : selected === 2 ? "wrong" : "" : "" }>{question.option2}</li>
+        <li onClick={() => checkAns(3)} className={ selected ? question.ans === 3 ? "correct" : selected === 3 ? "wrong" : "" : "" }>{question.option3}</li>
+        <li onClick={() => checkAns(4)} className={ selected ? question.ans === 4 ? "correct" : selected === 4 ? "wrong" : "" : "" }>{question.option4}</li>
+    </ul>
