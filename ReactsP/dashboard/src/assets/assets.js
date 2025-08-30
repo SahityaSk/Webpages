@@ -187,7 +187,7 @@ export const comments_data = [
         {
             "_id": "6811ed9e7836a82ba747cb25",
             "blog": blog_data[0],
-            "name": "Michael Scott",
+            "name": "Debojyoti Mitra",
             "content": "This is my new comment",
             "isApproved": false,
             "createdAt": "2025-04-30T09:30:06.918Z",
@@ -197,7 +197,7 @@ export const comments_data = [
         {
             "_id": "6810a752fbb942aa7cbf4adb",
             "blog": blog_data[1],
-            "name": "John Doe",
+            "name": "Arnab Das",
             "content": "This is a nice blog",
             "isApproved": false,
             "createdAt": "2025-04-29T10:17:54.832Z",
@@ -207,7 +207,7 @@ export const comments_data = [
         {
             "_id": "680779aebef75c08f8b4898f",
             "blog": blog_data[2],
-            "name": "Jack London",
+            "name": "Rishav Biswas",
             "content": "Hi this blog is must to read",
             "isApproved": true,
             "createdAt": "2025-04-22T11:12:46.547Z",
@@ -217,7 +217,7 @@ export const comments_data = [
         {
             "_id": "680770aeb2897e5c28bf9b26",
             "blog": blog_data[3],
-            "name": "Sam Smith",
+            "name": "Amrita Halder",
             "content": "This is the best blog, everybody should read it",
             "isApproved": false,
             "createdAt": "2025-04-22T10:34:22.020Z",
@@ -227,7 +227,7 @@ export const comments_data = [
         {
             "_id": "68076468e32055c94a696cf5",
             "blog": blog_data[4],
-            "name": "Peter Lawrence",
+            "name": "Lionel Messi",
             "content": "Honestly, I did not expect this to work, but it totally did. Saved my project!",
             "isApproved": true,
             "createdAt": "2025-04-22T09:42:00.444Z",

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cake Login By Sahitya Sk</title>
+    <title>Cake Login By Moon Knight</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #ffd700, #ff69b4, #ff8c00);
+            background: linear-gradient(150deg, #ffe54f, #ff5dae, #88ff56);
             overflow: hidden;
             position: relative;
         }
@@ -38,7 +38,7 @@
             width: 100%;
             height: 100%;
             position: relative;
-            background: linear-gradient(45deg, #deb887 30%, #cd853f 100%);
+            background: linear-gradient(45deg, #ffc57a 30%, #ff9a35 100%);
             border-radius: 20px 20px 50px 50px;
             animation: cakeGlow 2s infinite alternate;
         }
@@ -50,7 +50,7 @@
             left: 30px;
             right: 30px;
             height: 60px;
-            background: linear-gradient(45deg, #ff69b4 30%, #ff1493 100%);
+            background: linear-gradient(45deg, #ff3299 30%, #ff7cc2 100%);
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(255,105,180,0.5);
         }
@@ -76,7 +76,7 @@
             height: 35px;
             background: #ff0000;
             border-radius: 50%;
-            box-shadow: 0 8px 20px rgba(255,0,0,0.5);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.775);
         }
 
         .cherry::after {
@@ -86,14 +86,14 @@
             left: 10px;
             width: 12px;
             height: 20px;
-            background: #008000;
+            background: #0eb80e;
             border-radius: 8px;
             transform: rotate(45deg);
         }
 
         @keyframes cakeGlow {
             from { filter: drop-shadow(0 0 10px rgba(255,215,0,0.4)); }
-            to { filter: drop-shadow(0 0 25px rgba(255,140,0,0.8)); }
+            to { filter: drop-shadow(0 0 25px rgba(255, 157, 38, 0.893)); }
         }
 
         #login-form {
@@ -141,8 +141,8 @@
         }
 
         input:focus {
-            border-color: #ff69b4;
-            box-shadow: 0 0 20px rgba(255,105,180,0.6);
+            border-color: #87ff8b;
+            box-shadow: 0 0 20px rgba(99, 174, 0, 0.6);
             background: rgba(255, 255, 255, 0.25);
         }
 
@@ -151,8 +151,8 @@
         }
 
         button {
-            background: linear-gradient(45deg, #ff8c00, #ffd700);
-            color: white;
+            background: linear-gradient(45deg, #87ff8b, #ffde23);
+            color: rgb(255, 35, 226);
             border: none;
             padding: 16px 35px;
             font-size: 19px;
@@ -161,13 +161,13 @@
             transition: all 0.3s ease;
             margin-top: 20px;
             letter-spacing: 1.2px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            box-shadow: 0 8px 20px rgba(255,140,0,0.5);
+            text-shadow: 0 2px 4px rgba(255, 85, 252, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 78, 237, 0.48);
         }
 
         button:hover {
             transform: scale(1.08);
-            box-shadow: 0 12px 30px rgba(255,140,0,0.7);
+            box-shadow: 0 12px 30px rgba(255, 148, 18, 0.87);
         }
 
         .sprinkle {
@@ -206,10 +206,10 @@
             event.preventDefault();
             const nameInput = document.getElementById('love-name').value.trim();
             if (nameInput.toLowerCase() === "amrita") {
-                alert("Welcome to the Cake Party!🎂🎂");
+                alert("Welcome to Moon's Birthday Party!!🎂🎂 ");
                 window.location.href = "main.html";
             } else {
-                alert("Oops! Wrong ingredient!! 🎂");
+                alert("Oops!! Cake is wasting!! 🎂");
             }
         });
 
