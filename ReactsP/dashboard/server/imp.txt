@@ -1,3 +1,0 @@
-npm i express mongoose cors dotenv jsonwebtoken multer
-
-npm install nodemon --save-dev
