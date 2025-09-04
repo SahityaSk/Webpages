@@ -2,6 +2,7 @@ import fs from "fs";
 import imagekit from "../configs/imageKit.js";
 import Blog from "../models/Blog.js";
 import Comment from "../models/Comments.js";
+import main from "../configs/gemini.js";
 
 // Add Blog
 export const addBlog = async (req, res) => {
@@ -10,31 +11,28 @@ export const addBlog = async (req, res) => {
     const imageFile = req.file;
 
     if (!title || !description || !category || !imageFile) {
-      return res.status(400).json({ success: false, message: "Missing required fields" });
+      return res.json({ success: false, message: "Missing required fields" });
     }
 
-    const fileBuffer = imageFile.buffer || fs.readFileSync(imageFile.path);
+    const fileBuffer = fs.readFileSync(imageFile.path);
 
     const response = await imagekit.upload({
       file: fileBuffer,
       fileName: imageFile.originalname,
-      folder: "/blogs",
+      folder: "/blogs"
     });
 
     const optimizedImageUrl = imagekit.url({
       path: response.filePath,
       transformation: [
-        { quality: "auto", format: "webp", width: 1280 },
-      ],
+        { quality: "auto"}, {format: "webp"}, {width: 1280 }
+      ]
     });
 
+    const image = optimizedImageUrl;
+
     await Blog.create({
-      title,
-      subTitle,
-      description,
-      category,
-      Image: optimizedImageUrl, 
-      isPublished,
+      title, subTitle, description, category, image, isPublished
     });
 
     res.json({ success: true, message: "Blog Added Successfully" });
@@ -124,5 +122,15 @@ export const addComment = async (req, res) => {
         res.json({ success: true, comments});
       } catch (error) {
         res.json({ success: false, message: error.message });
+      }
+  }
+
+  export const generateContent = async (req, res)=>{
+      try {
+        const { prompt } = req.body
+        const content = await main(prompt + 'Generate a blog content for this topic in simple text format')
+        res.json({success: true, content})
+      } catch (error) {
+        res.json({success: false, message: error.message})
       }
   }
