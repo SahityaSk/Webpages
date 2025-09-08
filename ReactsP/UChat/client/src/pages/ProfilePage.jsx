@@ -16,7 +16,7 @@ const ProfilePage = () => {
 
   return (
     <div className='min-h-screen bg-cover bg-no-repeat flex items-center justify-center'>
-      <div className='w-5/6 max-w-2xl backdrop-blur-2xl text-gray-300 border-2 border-gray-600
+      <div className='w-5/6 max-w-2xl backdrop-blur-2xl text-gray-300 border-1 border-red-200
       flex items-center justify-between max-sm:flex-col-reverse rounded-lg'>
         <form onSubmit={handleSubmit}
           className='flex flex-col gap-5 p-10 flex-1'>
@@ -30,13 +30,13 @@ const ProfilePage = () => {
           </label>
           <input onChange={(e)=>setName(e.target.value)} value={name}
             type="text" required placeholder='Your Name'
-            className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-1 focus:ring-violet-500'/>
+            className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-1 focus:ring-red-200'/>
           <textarea onChange={(e)=>setBio(e.target.value)} value={bio}
             placeholder='Write profile bio' required rows={4}
-            className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-1 focus:ring-violet-500'>
+            className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-1 focus:ring-red-200'>
           </textarea>
           <button type='submit'
-          className='p-2 bg-gradient-to-r from-purple-400 to-violet-600 text-white rounded-full cursor-pointer'>
+          className='p-2 bg-gradient-to-r from-gray-200 to-red-400 text-gray-800 font-medium rounded-full cursor-pointer'>
             Save</button>
         </form>
         <img className='max-w-50 rounded-full mx-10 max-sm:mt-10'

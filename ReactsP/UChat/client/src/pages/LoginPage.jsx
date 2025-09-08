@@ -24,7 +24,7 @@ const LoginPage = () => {
     <div className='min-h-screen bg-cover bg-center flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl'>
       <img src={assets.logo} alt="" className='w-[min(30vw,250px)]'/>
 
-      <form onSubmit={onSubmitHandler} className='border-1 bg-white/8 text-white border-purple-600 p-6 flex flex-col gap-6 rounded-lg shadow-lg'>
+      <form onSubmit={onSubmitHandler} className='border-1 bg-white/8 text-white border-red-300 p-6 flex flex-col gap-6 rounded-lg shadow-lg'>
         <h2 className='font-medium text-2xl flex justify-between items-center'>
           {currState}
           {isDataSubmitted && 
@@ -36,29 +36,30 @@ const LoginPage = () => {
         {currState === "Sign Up" && !isDataSubmitted && (
           <input onChange={(e)=>setFullName(e.target.value)} value={fullName}
           type="text" placeholder='Full Name' required
-          className='p-2 border-1 border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'/>
+          className='p-2 border-1 border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-red-200'/>
         )}
 
         {!isDataSubmitted && (
           <>
             <input onChange={(e)=>setEmail(e.target.value)} value={email}
              type="email" placeholder='Email Address' required
-             className='p-2 border-1 border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'/>
+             className='p-2 border-1 border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-red-200'/>
             <input onChange={(e)=>setPassword(e.target.value)} value={password}
              type="password" placeholder='Password' required
-             className='p-2 border-1 border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'/>
+             className='p-2 border-1 border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-red-200'/>
           </>
         )}
 
         {currState === "Sign Up" && isDataSubmitted && (
             <textarea onChange={(e)=>setBio(e.target.value)} value={bio}
             rows={4} placeholder='Provide a short bio...' required
-            className='p-2 border-1 border-violet-500 rounded-md focus:outline-none focus:ring-indigo-500'></textarea>
+            className='p-2 border-1 border-violet-500 rounded-md focus:outline-none focus:ring-red-300'>
+            </textarea>
           )
         }
 
         <button type='submit'
-        className='p-3 bg-gradient-to-r from-purple-400 to-violet-600 text-white rounded-md cursor-pointer'>
+        className='p-3 bg-gradient-to-r from-gray-200 to-red-400 text-gray-800 font-medium rounded-md cursor-pointer'>
           {currState === "Sign Up" ? "Create Account" : "Login Now"}
         </button>
 
@@ -69,13 +70,13 @@ const LoginPage = () => {
 
         <div className='flex flex-col gap-2'>
           {currState === "Sign Up" ? (
-            <p className='text-sm text-gray-600'>Already have an account? 
+            <p className='text-sm text-gray-300'>Already have an account? 
             <span onClick={()=>{setCurrState("Login"); setIsDataSubmitted(false)}}
-            className='font-medium text-violet-500 cursor-pointer'> Login here </span></p>
+            className='font-medium text-yellow-400 cursor-pointer'> Login here </span></p>
           ) : (
-            <p className='text-sm text-gray-600'>Create an account! 
+            <p className='text-sm text-gray-300'>Create an account! 
             <span onClick={()=>setCurrState("Sign Up")}
-            className='font-medium text-violet-500 cursor-pointer'> Click here </span></p>
+            className='font-medium text-yellow-400 cursor-pointer'> Click here </span></p>
           )}
         </div>
        
