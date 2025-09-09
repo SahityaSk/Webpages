@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import assets from '../assets/assets';
+import { AuthContext } from '../../context/AuthContext';
 
 const LoginPage = () => {
 
@@ -10,6 +11,8 @@ const LoginPage = () => {
   const [bio, setBio] = useState("")
   const [isDataSubmitted, setIsDataSubmitted] = useState(false);
 
+  const { login } = useContext(AuthContext)
+
   const onSubmitHandler = (event)=>{
     event.preventDefault();
 
@@ -17,6 +20,7 @@ const LoginPage = () => {
       setIsDataSubmitted(true)
       return;
     }
+    login(currState === "Sign Up" ? 'signup' : 'login', {fullName, email, password, bio})
   }
 
 
@@ -53,7 +57,7 @@ const LoginPage = () => {
         {currState === "Sign Up" && isDataSubmitted && (
             <textarea onChange={(e)=>setBio(e.target.value)} value={bio}
             rows={4} placeholder='Provide a short bio...' required
-            className='p-2 border-1 border-violet-500 rounded-md focus:outline-none focus:ring-red-300'>
+            className='p-2 border-1 border-red-200 rounded-md focus:outline-none focus:ring-red-300'>
             </textarea>
           )
         }
