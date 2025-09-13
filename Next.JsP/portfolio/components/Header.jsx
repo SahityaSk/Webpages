@@ -15,7 +15,7 @@ const Header = () => {
       </h3>
 
       <h1 className='text-3xl sm:text-4xl lg:text-[66px] font-ovo mb-4'>
-        A Full Stack web developer based in India.
+        A Full Stack Web Developer based in India.
       </h1>
 
       <p className='max-w-2xl mx-auto font-Ovo'>
