@@ -4,3 +4,8 @@
 *{
   font-family: Outfit, sans-serif;
 }
+
+.dark {
+  --bg-color: #0f172a;   
+  --text-color: #f8fafc;
+}
