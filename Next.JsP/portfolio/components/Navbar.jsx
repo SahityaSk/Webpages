@@ -49,7 +49,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         <div className='flex items-center gap-4 md:ml-4'>
 
             <button onClick={()=>setIsDarkMode(prev => !prev)}>
-                <Image src={assets.moon_icon} alt="" className='w-6 cursor-pointer'/>
+                <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="" className='w-6 cursor-pointer'/>
             </button>
 
             <a href="#contact"
