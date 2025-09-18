@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CalendarIcon, ClockIcon, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { assets } from "../assets/assets"; 
@@ -27,7 +27,7 @@ const movies = [
   },
   {
     id: 3,
-    title: "Avengers: \nDoomsday",
+    title: "Avengers\nDoomsday",
     bg: "/Doomsday.png",
     logo: assets.marvelLogo,
     genres: "Action | Adventure | Sci-Fi | UA13+",
@@ -37,23 +37,22 @@ const movies = [
   },
   {
     id: 4,
-    title: "Demon Slayer:\nKimetsu no Yaiba\nInfinity Castle",
-    bg: "/demonslayer.png",
-    logo: assets.demonSlayerLogo,
-    genres: "Action | Adventure | Anime | UA13+",
-    year: "2025",
-    duration: "2h 35m",
-    description: "The Demon Slayer Corps plunge into Infinity Castle to defeat Muzan. However, the remaining Hashiras and the Demon Slayers who survived Tanjiro's Final Selection are pitted against the remaining members of the Twelve Kizuki first.",
+    title: "Inception",
+    bg: "/inception.png",
+    genres: "Action | Sci-Fi | Adventure | Thriller | A",
+    year: "2010",
+    duration: "2h 38m",
+    description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
   },
   {
     id: 5,
-    title: "Demon Slayer:\nKimetsu no Yaiba\nInfinity Castle",
-    bg: "/demonslayer.png",
-    logo: assets.demonSlayerLogo,
-    genres: "Action | Adventure | Anime | UA13+",
-    year: "2025",
-    duration: "2h 35m",
-    description: "The Demon Slayer Corps plunge into Infinity Castle to defeat Muzan. However, the remaining Hashiras and the Demon Slayers who survived Tanjiro's Final Selection are pitted against the remaining members of the Twelve Kizuki first.",
+    title: "Jurassic World :\n Fallen Kingdom",
+    bg: "/jurassic_world.png",
+    logo: assets.jurassicLogo,
+    genres: "Action | Sci-Fi | UA13+",
+    year: "2015",
+    duration: "2h 4m",
+    description: "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree.",
   },
 ];
 
@@ -65,6 +64,14 @@ const MovieSlider = () => {
 
   const nextMovie = () => setIndex((prev) => (prev + 1) % movies.length);
   const prevMovie = () => setIndex((prev) => (prev - 1 + movies.length) % movies.length);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextMovie();
+    }, 5000); 
+
+    return () => clearInterval(interval);
+  }, []);
 
   const movie = movies[index];
 

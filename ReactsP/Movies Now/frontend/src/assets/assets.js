@@ -5,11 +5,13 @@ import googlePlay from './googlePlay.svg'
 import appStore from './appStore.svg'
 import screenImage from './screenImage.svg'
 import profile from './profile.png'
+import jurassicLogo from './jurassicLogo.svg'
 
 export const assets = {
     logo,
     demonSlayerLogo,
     marvelLogo,
+    jurassicLogo,
     googlePlay,
     appStore,
     screenImage,
