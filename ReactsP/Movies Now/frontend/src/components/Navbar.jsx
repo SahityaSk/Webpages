@@ -26,11 +26,11 @@ const Navbar = () => {
         <XIcon onClick={() => setIsOpen(!isOpen)}
         className='absolute md:hidden top-6 right-6 w-6 h-6 cursor-pointer'/>
 
-        <Link onClick={() => {scroll(0,0), setIsOpen(false)}} to='/' className='hover:text-red-400 hover:scale-105'>Home</Link>
-        <Link onClick={() => {scroll(0,0), setIsOpen(false)}} to='/movies' className='hover:text-red-400 hover:scale-105'>Movies</Link>
-        <Link onClick={() => {scroll(0,0), setIsOpen(false)}} to='/' className='hover:text-red-400 hover:scale-105'>Theatres</Link>
-        <Link onClick={() => {scroll(0,0), setIsOpen(false)}} to='/' className='hover:text-red-400 hover:scale-105'>Releases</Link>
-        <Link onClick={() => {scroll(0,0), setIsOpen(false)}} to='/favorite' className='hover:text-red-400 hover:scale-105'>Favorites</Link>
+        <Link onClick={() => {scroll(0,0); setIsOpen(false)}} to='/' className='hover:text-red-400 hover:scale-105'>Home</Link>
+        <Link onClick={() => {scroll(0,0); setIsOpen(false)}} to='/movies' className='hover:text-red-400 hover:scale-105'>Movies</Link>
+        <Link onClick={() => {scroll(0,0); setIsOpen(false)}} to='/' className='hover:text-red-400 hover:scale-105'>Theatres</Link>
+        <Link onClick={() => {scroll(0,0); setIsOpen(false)}} to='/' className='hover:text-red-400 hover:scale-105'>Releases</Link>
+        <Link onClick={() => {scroll(0,0); setIsOpen(false)}} to='/favorite' className='hover:text-red-400 hover:scale-105'>Favorites</Link>
       </div>
 
       <div className='flex items-center gap-8'>
