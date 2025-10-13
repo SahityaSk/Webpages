@@ -58,8 +58,7 @@
             z-index: 1;
             pointer-events: none;
         }
-
-        .birthday-text {
+            .birthday-text {
             font-family: 'Dancing Script', cursive;
             color: white;
             text-align: center;
@@ -72,7 +71,10 @@
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             white-space: nowrap;
             font-size: 100px;
-        }
+            letter-spacing: -2px; 
+            word-spacing: 12px;    
+            line-height: 1;        
+            }
 
         .romantic-message {
             font-family: 'Poppins', sans-serif;
@@ -82,13 +84,36 @@
             top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
-            opacity: 0;
             font-weight: 300;
             font-size: 1.2rem;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
             width: 80%;
             max-width: 600px;
+            opacity: 0;                
+            transition: opacity 1s ease;
+            z-index: 10;
+        }
+
+        .bdygirl{
+                position: relative;
+                bottom: 200px;
+                display: block;
+                margin: 50px auto 0;
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                object-fit: cover;
+                opacity: 0;
+                z-index: -1; 
+                transition: opacity  2.5s ease, transform  5s ease;
+                box-shadow: 0 0 25px rgba(255, 123, 172, 0.5), 0 8px 25px rgba(0, 0, 0, 0.3);
+                }
+
+        .birthday-container:hover .bdygirl {
+            opacity: 1;
+            transform: translateY(0); 
         }
 
         .hearts-container {
@@ -257,14 +282,15 @@
 </head>
 <body>
     <div class="background"></div>
-    <canvas id="starCanvas"></canvas>
-    <canvas id="petalsCanvas"></canvas>
-    <canvas id="fireworksCanvas"></canvas>
+        <canvas id="starCanvas"></canvas>
+        <canvas id="petalsCanvas"></canvas>
+        <canvas id="fireworksCanvas"></canvas>
     <div class="hearts-container" id="heartsContainer"></div>
     
     <div class="birthday-container">
         <h1 class="birthday-text text-6xl">Happy&nbsp;Birthday,&nbsp;Moon🌕🌛</h1>
         <p class="romantic-message">Every moment with you is a celebration, but today is especially magical. Here's to another year of love, laughter, and some beautiful memories together.</p>
+        <img src="images/cuteSelfie.png" class="bdygirl" alt="Cute Selfie" >
         <button class="celebrate-button" id="celebrateBtn">Celebrate Your Birthday</button>
         <button class="next-page-button" id="nextPageBtn">Next</button>
     </div>
@@ -770,22 +796,19 @@
             }, 4000);
         }
 
-        // ---------- FIXED emoji/loop section START ----------
-        // A safe grapheme-splitting function:
         function splitToGraphemes(str) {
-            // Preferred: Intl.Segmenter (keeps emojis and ZWJ sequences intact)
+    
             if (typeof Intl !== 'undefined' && typeof Intl.Segmenter === 'function') {
                 try {
                     const seg = new Intl.Segmenter(undefined, { granularity: 'grapheme' });
                     return [...seg.segment(str)].map(s => s.segment);
                 } catch (e) {
-                    // fallback to Array.from below if an error occurs
+        
                 }
             }
-            // Fallback: Array.from handles surrogate pairs (common emoji like 😊)
+
             return Array.from(str);
         }
-        // ---------- FIXED emoji/loop section END ----------
 
         window.addEventListener('load', () => {
 
@@ -798,10 +821,8 @@
             const text = birthdayText.textContent;
             birthdayText.textContent = '';
 
-            // Use the safe grapheme splitting
             const chars = splitToGraphemes(text);
 
-            // Create spans for each grapheme cluster (letters, spaces, emojis)
             chars.forEach((ch) => {
                 const letter = document.createElement('span');
                 letter.textContent = ch;
@@ -822,12 +843,16 @@
                         ease: "back.out(1.7)"
                     });
                 });
-                
-                gsap.to(birthdayText, {
-                    textShadow: "0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 123, 172, 0.4)",
-                    delay: 3 + chars.length * 0.1 + 0.3,
-                    duration: 1.5
+                gsap.to(birthdayText, { textShadow: "0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 123, 172, 0.4)", delay: 3 + chars.length * 0.1 + 0.3, duration: 1.5 });
+                const bdygirl = document.querySelector('.bdygirl');
+                gsap.to(bdygirl, {
+                opacity: 1,
+                scale: 1.05,
+                delay: 3 + chars.length * 0.1 + 1,
+                duration: 2,
+                ease: "power2.out"
                 });
+               
                 
                 const celebrateBtn = document.getElementById('celebrateBtn');
                 gsap.to(celebrateBtn, {
